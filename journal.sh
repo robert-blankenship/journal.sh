@@ -6,7 +6,7 @@ while true; do
 	read -rsn1 input
 	if [ "$input" = "n" ]; then
 		echo "Writing journal"
-		vi ~/journal.d/$(date +%s).journal
+		mkdir -p ~/journal.d && vi ~/journal.d/$(date +%s).journal
 		showMenu
 		break
 	elif [ "$input" = "r" ]; then
